@@ -1,0 +1,30 @@
+{
+    "name" : "Ais/DosenBundle",
+    "description" : "A bundle filled with Dosen",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Hasan Setiawan",
+        "email" : "vizzlearn@gmail.com"
+    }],
+    "keywords" : [
+        "Dosen Bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Ais\\DosenBundle" : ""
+        }
+    },
+    "target-dir" : "Ais/DosenBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "0.0.1-dev"
+        }
+    }
+}

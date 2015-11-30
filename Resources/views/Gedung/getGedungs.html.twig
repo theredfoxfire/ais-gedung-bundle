@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'gedung.list'|trans({}, 'AisGedungBundle') }}</h1>
+
+    <ul id="gedung-list">
+        {% for gedung in gedungs %}
+            <li>
+                <a href="{{ path('api_1_get_gedung', {'id': gedung.id}) }}">{{ gedung.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_gedungs', {'id': gedung.id}) }}">{{ 'gedung.edit.link'|trans({}, 'AisGedungBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_gedungs', {'id': gedung.id}) }}">{{ 'gedung.remove.link'|trans({}, 'AisGedungBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'gedung.list.empty'|trans({}, 'AisGedungBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_gedung') }}">{{ 'gedung.new.link'|trans({}, 'AisGedungBundle') }}</a>
+    </p>
+{% endblock %}

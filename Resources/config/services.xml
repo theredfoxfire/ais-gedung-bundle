@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="ais_gedung.gedung.handler.class">Ais\GedungBundle\Handler\GedungHandler</parameter>
+        <parameter key="ais_gedung.gedung.class">Ais\GedungBundle\Entity\Gedung</parameter>
+    </parameters>
+
+    <services>
+        <service id="ais_gedung.gedung.handler" class="%ais_gedung.gedung.handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%ais_gedung.gedung.class%</argument>
+            <argument type="service" id="form.factory"></argument>
+        </service>
+    </services>
+
+</container>

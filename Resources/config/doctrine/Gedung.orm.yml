@@ -1,0 +1,21 @@
+Ais\GedungBundle\Entity\Gedung:
+ type: entity
+ table: gedung
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  kode:
+   type: string
+   length: 10
+   unique: true
+  nama:
+   type: string
+   length: 100
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true

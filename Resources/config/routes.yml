@@ -1,0 +1,5 @@
+ais_gedung_gedung:
+    type: rest
+    prefix: /v1
+    resource: Ais\GedungBundle\Controller\GedungController
+    name_prefix:  api_1_ # naming collision
