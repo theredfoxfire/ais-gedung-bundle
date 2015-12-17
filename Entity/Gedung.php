@@ -142,4 +142,3 @@ class Gedung implements GedungInterface
         return $this->is_delete;
     }
 }
-

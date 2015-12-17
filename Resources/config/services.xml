@@ -16,6 +16,16 @@
             <argument>%ais_gedung.gedung.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        
+        <service id="ais_gedung.gedung.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_gedung.gedung.class%</argument>
+		</service>
+        
+        <service id="ais_gedung.gedung.repository" 
+			class="Ais\GedungBundle\Repository\GedungRepository"
+			factory-service="ais_gedung.gedung.manager" factory-method="getRepository">
+				<argument>%ais_gedung.gedung.class%</argument>
+		</service>
     </services>
 
 </container>

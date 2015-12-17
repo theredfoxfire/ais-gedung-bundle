@@ -1,6 +1,7 @@
 Ais\GedungBundle\Entity\Gedung:
  type: entity
  table: gedung
+ repositoryClass: Ais\GedungBundle\Repository\GedungRepository
  id:
   id: 
    type: integer
