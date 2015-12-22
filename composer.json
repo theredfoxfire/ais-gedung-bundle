@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/GedungBundle",
+    "name" : "ais/gedungbundle",
     "description" : "A bundle filled with Gedung",
     "type" : "symfony-bundle",
     "authors" : [{
